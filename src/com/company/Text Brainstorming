@@ -20,3 +20,19 @@ while (item.hasNext()){
   change_stats(attribute, val);
   i++
 }
+
+Naming Scheme:
+    It is important to have the same naming scheme for more readabiliy and consistency.
+
+    All Classes Are Named with First Letter Capitalized (eg. Class, ClassName, LongClassName)
+
+    Methods are named with first Word not capitalized but all others caped (eg. name, nameOfMethod,NameOfMethod)
+
+    Enums are all Capped with underscores between words (eg. ENUM, ENUM_NAME)
+
+    Variables:
+        Global Static Variables have an m_ before the name, to indicate their global (eg. m_scan, m_globalVariableName)
+
+        Global Variables have all lower case, and an underscore between words (eg. variable_name, total_items)
+
+        Local Variables have first word not capitolized, but all others are (eg. localVariable, local)
