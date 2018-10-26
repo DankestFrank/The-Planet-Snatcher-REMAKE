@@ -4,6 +4,15 @@ public class Character{
   public static ArrayList<String> Char_items = new ArrayList<>();
   public static HashMap<String, Integer> Char_stats = new HashMap<>();  //strength, intelligence, stealth, health, hydration, food
 
+  public static void initialize_status(){
+    Char_stats.put("strength", 1);
+    Char_stats.put("intelligence", 1);
+    Char_stats.put("stealth", 1);
+    Char_stats.put("health", 1);
+    Char_stats.put("hydration", 10); // goes down
+    Char_stats.put("food", 20); // goes down
+    display();
+  }
   public static void display(){
     for(String t:Char_stats.keySet()){
       System.out.println(Char_stats.get(t));
@@ -15,13 +24,7 @@ public class Character{
 
   public static void main(String[]args){
     //input tests below
-    Char_stats.put("strength", 1);
-    Char_stats.put("intelligence", 1);
-    Char_stats.put("stealth", 1);
-    Char_stats.put("health", 1);
-    Char_stats.put("hydration", 10); // goes down
-    Char_stats.put("food", 20); // goes down
-    display();
+    initialize_status();
     String statName = scan.nextLine();
     int statValue = scan.nextInt();
     change_stats(statName, statValue);
