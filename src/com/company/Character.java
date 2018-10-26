@@ -9,9 +9,7 @@ public class Character{
 		char_stats = new HashMap<>();
 
 		char_items = new ArrayList<>();
-	}
 
-	public void initializeStatus(){
 		char_stats.put("strength", 1);
 		char_stats.put("intelligence", 1);
 		char_stats.put("stealth", 1);
@@ -19,12 +17,14 @@ public class Character{
 		char_stats.put("hydration", 10); // goes down
 		char_stats.put("food", 20); // goes down
 	}
+
 	public void display(){
 		System.out.println(char_stats);
 	}
 	public void changeStats(String nameOfAttribute, int value){
+		//Check if hashMap contains attribute, if so than update value to original + new value
 		if (char_stats.containsKey(nameOfAttribute))
-			this.char_stats.put(nameOfAttribute,value);
+			this.char_stats.put(nameOfAttribute, (char_stats.get(nameOfAttribute) + value) );
 
 	}
 

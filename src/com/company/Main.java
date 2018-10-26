@@ -8,6 +8,7 @@ public class Main{
 
     	character1.changeStats("strength",4);
 
-    	System.out.println(character1.char_stats.get("strength"));
+    	character1.display();
     }
 }
+
