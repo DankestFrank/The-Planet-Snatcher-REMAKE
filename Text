@@ -1,0 +1,21 @@
+//how items are stored and activated:
+//there will be an arraylist containing hashmaps (items)
+//each item will be an arraylist of the string of the attribute they are modifying ("strength"), and the value (-4)
+//example
+ArrayList<HashMap> inventory = new ArrayList<HashMap>();
+HashMap<String, Integer> item1 = new HashMap<String, Integer>();
+HashMap<String, Integer> item2 = new HashMap<String, Integer>();
+item1.put("strength", -4)
+item2.put("intelligence", 2)
+inventory.put(item1)
+inventory.put(item2) // you can replace item1 or item2 with any name you want
+// to search for a item and activate it, I have already came up with a method called "change_stats"
+
+public static void input_item(HashMap any_Item)
+item = inventory.get(any_Item)
+i = 0;
+while (item.hasNext()){
+  String attribute = item.indexOf(i);
+  String val = item1.indexOf(i).key;
+  change_stats(attribute, val);
+}
