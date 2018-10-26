@@ -11,12 +11,9 @@ public class Character{
     Char_stats.put("health", 1);
     Char_stats.put("hydration", 10); // goes down
     Char_stats.put("food", 20); // goes down
-    display();
   }
   public static void display(){
-    for(String t:Char_stats.keySet()){
-      System.out.println(Char_stats.get(t));
-    }
+    System.out.println(Char_stats);
   }
   public static void change_stats(String name, int value){
     Char_stats.get(name) += value; //"name" is underlined in red saying it has an error please help fix
@@ -25,8 +22,10 @@ public class Character{
   public static void main(String[]args){
     //input tests below
     initialize_status();
+    display();
     String statName = scan.nextLine();
     int statValue = scan.nextInt();
     change_stats(statName, statValue);
+    display();
   }
 }
