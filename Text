@@ -18,4 +18,5 @@ while (item.hasNext()){
   String attribute = item.indexOf(i);
   String val = item1.indexOf(i).key;
   change_stats(attribute, val);
+  i++
 }
