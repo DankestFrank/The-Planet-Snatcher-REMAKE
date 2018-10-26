@@ -2,13 +2,13 @@ package com.company;
 import java.util.*;
 public class Character{
 	public static Scanner scan = new Scanner(System.in);
-	public ArrayList<String> char_items;
+	public ArrayList<HashMap<String, Integer>> char_items;
 	public HashMap<String, Integer> char_stats ;  //strength, intelligence, stealth, health, hydration, food
 
 	Character(){
 		char_stats = new HashMap<>();
 
-		char_items = new ArrayList<>();
+		char_items = new ArrayList<HashMap<String, Integer>>();
 
 		char_stats.put("strength", 1);
 		char_stats.put("intelligence", 1);

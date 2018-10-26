@@ -12,7 +12,7 @@ inventory.put(item2) // you can replace item1 or item2 with any name you want
 // to search for a item and activate it, I have already came up with a method called "change_stats"
 
 public static void input_item(HashMap any_Item)
-item = inventory.get(any_Item)
+HashMap<String, Integer> item = inventory.get(any_Item)
 i = 0;
 while (item.hasNext()){
   String attribute = item.indexOf(i);
