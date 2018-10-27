@@ -71,8 +71,9 @@ public class Display {
 		clear();
 	}
 
-	public static void inventory(){}
+
     public static void main(String[]args) throws Exception {
+
 		mainMenu();
     }
 }
