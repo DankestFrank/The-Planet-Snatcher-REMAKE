@@ -60,6 +60,7 @@ public class Display {
 		display("WELCOME TO\n" );
 
 		System.out.println(readFileAsString(System.getProperty("user.dir") + "\\The-Planet-Snatcher-REMAKE\\src\\com\\company\\TitleArt").replaceAll("&&&","\t\t\t\t\t"));
+		//TODO: Make File Global
 		System.out.print("\n\n\n");
 		display("By Frank Dininno and Dylan Starink");
 		System.out.print("\n\n\n");

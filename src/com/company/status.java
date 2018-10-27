@@ -22,10 +22,10 @@ public class status{
 
 		System.out.println(char_stats);
 	}
-	public void changeStats(String nameOfAttribute, int value){
+	public static void changeStats(String nameOfAttribute, int value){
 		//Check if hashMap contains attribute, if so than update value to original + new value
 		if (char_stats.containsKey(nameOfAttribute))
-			this.char_stats.put(nameOfAttribute, (char_stats.get(nameOfAttribute) + value) );
+			status.char_stats.put(nameOfAttribute, (char_stats.get(nameOfAttribute) + value) );
 
 	}
 

@@ -2,14 +2,11 @@ package com.company.inventory;
 
 import com.company.status;
 
-import javax.print.attribute.Attribute;
-import java.util.ArrayList;
-
 public class ItemTemplate{
 
-    public static status inventory = new status();
+
     ItemTemplate(){
-        inventory.char_items.add(this);
+        status.char_items.add(this);
     }
     boolean equipable = false;
     int strengthValue = 0;
@@ -28,22 +25,22 @@ public class ItemTemplate{
 
 
     public void changeAttributes() {
-        inventory.changeStats("strength", strengthValue);
-        inventory.changeStats("intelligence", intelligenceValue);
-        inventory.changeStats("promptitude", promptitudeValue);
-        inventory.changeStats("health", healthValue);
-        inventory.changeStats("malnutrition", malnutritionValue);
-        inventory.changeStats("hydration", hydrationValue);
+        status.changeStats("strength", strengthValue);
+        status.changeStats("intelligence", intelligenceValue);
+        status.changeStats("promptitude", promptitudeValue);
+        status.changeStats("health", healthValue);
+        status.changeStats("malnutrition", malnutritionValue);
+        status.changeStats("hydration", hydrationValue);
         boolean equipable = true;
     }
     Object currentEquipment = null;
     public void removeAttributes(){
-        inventory.changeStats("strength", -1 * strengthValue);
-        inventory.changeStats("promptitude", -1 * promptitudeValue);
-        inventory.changeStats("intelligence", -1 * intelligenceValue);
-        inventory.changeStats("health", -1 * healthValue);
-        inventory.changeStats("malnutrition", -1 * malnutritionValue);
-        inventory.changeStats("hydration", -1 * hydrationValue);
+        status.changeStats("strength", -1 * strengthValue);
+        status.changeStats("promptitude", -1 * promptitudeValue);
+        status.changeStats("intelligence", -1 * intelligenceValue);
+        status.changeStats("health", -1 * healthValue);
+        status.changeStats("malnutrition", -1 * malnutritionValue);
+        status.changeStats("hydration", -1 * hydrationValue);
     }
 }
 
