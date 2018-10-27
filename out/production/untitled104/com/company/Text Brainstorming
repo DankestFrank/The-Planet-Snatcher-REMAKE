@@ -1,0 +1,38 @@
+//how items are stored and activated:
+//there will be an arraylist containing hashmaps (items)
+//each item will be an arraylist of the string of the attribute they are modifying ("strength"), and the value (-4)
+//example
+ArrayList<HashMap> inventory = new ArrayList<HashMap>();
+HashMap<String, Integer> item1 = new HashMap<String, Integer>();
+HashMap<String, Integer> item2 = new HashMap<String, Integer>();
+item1.put("strength", -4)
+item2.put("intelligence", 2)
+inventory.put(item1)
+inventory.put(item2) // you can replace item1 or item2 with any name you want
+// to search for a item and activate it, I have already came up with a method called "change_stats"
+
+public static void input_item(HashMap any_Item)
+HashMap<String, Integer> item = inventory.get(any_Item)
+i = 0;
+while (item.hasNext()){
+  String attribute = item.indexOf(i);
+  String val = item1.indexOf(i).key;
+  change_stats(attribute, val);
+  i++
+}
+
+Naming Scheme:
+    It is important to have the same naming scheme for more readabiliy and consistency.
+
+    All Classes Are Named with First Letter Capitalized (eg. Class, ClassName, LongClassName)
+
+    Methods are named with first Word not capitalized but all others caped (eg. name, nameOfMethod,NameOfMethod)
+
+    Enums are all Capped with underscores between words (eg. ENUM, ENUM_NAME)
+
+    Variables:
+        Global Static Variables have an m_ before the name, to indicate their global (eg. m_scan, m_globalVariableName)
+
+        Global Variables have all lower case, and an underscore between words (eg. variable_name, total_items)
+
+        Local Variables have first word not capitolized, but all others are (eg. localVariable, local)
