@@ -52,7 +52,7 @@ public class ItemActions{
         }
         else{
             itemClass.changeAttributes();
-
+            status.char_items.remove(itemClass);
         }
     }
 }

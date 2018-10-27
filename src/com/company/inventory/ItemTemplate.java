@@ -12,9 +12,9 @@ public class ItemTemplate{
     int strengthValue = 0;
     int intelligenceValue = 0;
     int promptitudeValue = 0;
-    int healthValue = 25;
-    int malnutritionValue = 20;
-    int hydrationValue = 10;
+    int healthValue = 0;
+    int malnutritionValue = 0;
+    int hydrationValue = 0;
 
     // display object information
     String name;
