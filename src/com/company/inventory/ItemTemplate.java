@@ -1,13 +1,13 @@
 package com.company.inventory;
 
-import com.company.Character;
+import com.company.status;
 
 import javax.print.attribute.Attribute;
 import java.util.ArrayList;
 
 public class ItemTemplate{
 
-    public static Character inventory = new Character();
+    public static status inventory = new status();
     ItemTemplate(){
         inventory.char_items.add(this);
     }
@@ -15,14 +15,15 @@ public class ItemTemplate{
     int strengthValue = 0;
     int intelligenceValue = 0;
     int promptitudeValue = 0;
-    int healthValue = 0;
-    int malnutritionValue = 0;
-    int hydrationValue = 0;
+    int healthValue = 25;
+    int malnutritionValue = 20;
+    int hydrationValue = 10;
 
     // display object information
     String name;
-    String message = (this.name + " {Power: " + strengthValue +", Intelligence: " + intelligenceValue + ", Promptude: "+ promptitudeValue + ", Health: " + healthValue + " }\n");
-    String customMessage;
+    //choose to set message equal to the given placeholder or maually type it out
+    String messagePlaceholder = (this.name + " {Power: " + strengthValue +", Intelligence: " + intelligenceValue + ", Promptude: "+ promptitudeValue + ", Health: " + healthValue + " }\n");
+    String Message;
 
 
 

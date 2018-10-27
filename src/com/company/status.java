@@ -2,12 +2,12 @@ package com.company;
 import com.company.inventory.ItemTemplate;
 
 import java.util.*;
-public class Character{
+public class status{
 	//public static Scanner scan = new Scanner(System.in);
-	public ArrayList<ItemTemplate> char_items;
-	public HashMap<String, Integer> char_stats ;  //strength, intelligence, skill, health, hydration, malnutrition
+	public static ArrayList<ItemTemplate> char_items;
+	public static HashMap<String, Integer> char_stats ;  //strength, intelligence, skill, health, hydration, malnutrition
 
-	public Character(){
+	public status(){
 		char_stats = new HashMap<>();
 
 		char_stats.put("strength", 1);
