@@ -1,6 +1,11 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class Display {
@@ -9,8 +14,19 @@ public class Display {
 	static int width = 200;
 
 	public static void clear(){
+		String buffer  = "";
 		for (int x = 0; x <= height * 1.5; x++)
-			System.out.print("\n");
+			buffer += "\n";
+			System.out.print(buffer);
+	}
+
+	public static String readFileAsString(String fileName)throws Exception
+	{
+
+
+		String data = "";
+		data = new String(Files.readAllBytes(Paths.get(fileName)));
+		return data;
 	}
 
 	static void display(String str) {
@@ -38,16 +54,25 @@ public class Display {
 		System.out.println(buff.toString());
 	}
 
-	public static void mainMenu() throws IOException {
+	public static void mainMenu() throws Exception {
 
 		clear();
-		display("Main Menu" );
+		display("WELCOME TO\n" );
+
+		System.out.println(readFileAsString(System.getProperty("user.dir") + "\\The-Planet-Snatcher-REMAKE\\src\\com\\company\\TitleArt").replaceAll("&&&","\t\t\t\t\t"));
+		System.out.print("\n\n\n");
+		display("By Frank Dininno and Dylan Starink");
+		System.out.print("\n\n\n");
 		display("Press <Enter> To Continue");
+		System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
 		Scanner scan = new Scanner(System.in);
-		System.in.read();
+		scan.nextLine();
+		clear();
 	}
 
-    public static void main(String[]args){
+	public static void inventory(){}
+    public static void main(String[]args) throws Exception {
 		mainMenu();
     }
 }
