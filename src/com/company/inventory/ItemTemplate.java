@@ -1,12 +1,12 @@
 package com.company.inventory;
 
-import com.company.status;
+import com.company.Status;
 
 public class ItemTemplate{
 
 
     ItemTemplate(){
-        status.char_items.add(this);
+        Status.char_items.add(this);
     }
     boolean equipable = false;
     int strengthValue = 0;
@@ -25,22 +25,22 @@ public class ItemTemplate{
 
 
     public void changeAttributes() {
-        status.changeStats("strength", strengthValue);
-        status.changeStats("intelligence", intelligenceValue);
-        status.changeStats("promptitude", promptitudeValue);
-        status.changeStats("health", healthValue);
-        status.changeStats("malnutrition", malnutritionValue);
-        status.changeStats("hydration", hydrationValue);
+        Status.changeStats("strength", strengthValue);
+        Status.changeStats("intelligence", intelligenceValue);
+        Status.changeStats("promptitude", promptitudeValue);
+        Status.changeStats("health", healthValue);
+        Status.changeStats("malnutrition", malnutritionValue);
+        Status.changeStats("hydration", hydrationValue);
         boolean equipable = true;
     }
     static Object currentEquipment = null;
     public void removeAttributes(){
-        status.changeStats("strength", -1 * strengthValue);
-        status.changeStats("promptitude", -1 * promptitudeValue);
-        status.changeStats("intelligence", -1 * intelligenceValue);
-        status.changeStats("health", -1 * healthValue);
-        status.changeStats("malnutrition", -1 * malnutritionValue);
-        status.changeStats("hydration", -1 * hydrationValue);
+        Status.changeStats("strength", -1 * strengthValue);
+        Status.changeStats("promptitude", -1 * promptitudeValue);
+        Status.changeStats("intelligence", -1 * intelligenceValue);
+        Status.changeStats("health", -1 * healthValue);
+        Status.changeStats("malnutrition", -1 * malnutritionValue);
+        Status.changeStats("hydration", -1 * hydrationValue);
     }
 }
 

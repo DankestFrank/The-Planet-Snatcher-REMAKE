@@ -9,6 +9,7 @@ public class Display {
 
 	static int height = 44;
 	static int width = 200;
+	static char[] alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
 	public static void clear(){
 		String buffer  = "";
@@ -20,7 +21,6 @@ public class Display {
 	public static String readFileAsString(String fileName)throws Exception
 	{
 
-
 		String data = "";
 		URL path = Display.class.getResource(fileName);
 		File f = new File(path.getFile());
@@ -28,6 +28,11 @@ public class Display {
 		return data;
 	}
 
+	static void displayOptions(ArrayList<String> options){
+		for (int x = 0; x < options.size();x++){
+			display(alphabet[x] + ") " +options.get(x) );
+		}
+	}
 	static void display(String str) {
 		int left = (width - str.length()) / 2;
 		int right = width - left - str.length();
@@ -60,6 +65,7 @@ public class Display {
 
 
 
+		//Display Title
 		System.out.println(readFileAsString("TitleArt").replaceAll("&&&","\t\t\t\t\t"));
 		System.out.print("\n\n\n");
 		display("By Frank Dininno and Dylan Starink");
@@ -70,6 +76,17 @@ public class Display {
 		Scanner scan = new Scanner(System.in);
 		scan.nextLine();
 		clear();
+
+		System.out.println(readFileAsString("TitleArt").replaceAll("&&&","\t\t\t\t\t"));
+		System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n");
+
+		if (!Status.gameInProgress){
+			ArrayList<String> arr = new ArrayList<String>();
+			arr.add("Continue");
+			arr.add("New Game");
+			displayOptions(arr);
+		}
+
 	}
 
 

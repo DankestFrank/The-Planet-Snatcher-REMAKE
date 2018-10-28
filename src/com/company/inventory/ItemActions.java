@@ -1,6 +1,6 @@
 package com.company.inventory;
 
-import com.company.status;
+import com.company.Status;
 
 public class ItemActions{
 
@@ -27,8 +27,8 @@ public class ItemActions{
     public static ItemTemplate createBottle()
     {
         ItemTemplate Bottle = new ItemTemplate();
-        Bottle.Message = "Refills your hydration status";
-        Bottle.hydrationValue = 10-status.char_stats.get("hydration");
+        Bottle.Message = "Refills your hydration Status";
+        Bottle.hydrationValue = 10- Status.char_stats.get("hydration");
         return Bottle;
     }
     public static ItemTemplate createExoskeleton() {
@@ -52,7 +52,7 @@ public class ItemActions{
         }
         else{
             itemClass.changeAttributes();
-            status.char_items.remove(itemClass);
+            Status.char_items.remove(itemClass);
         }
     }
 }
