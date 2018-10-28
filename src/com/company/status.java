@@ -5,13 +5,12 @@ import java.util.*;
 public class status{
 	//public static Scanner scan = new Scanner(System.in);
 	public static ArrayList<ItemTemplate> char_items;
-	public static HashMap<String, Integer> char_stats ;  //strength, intelligence, skill, health, hydration, malnutrition
+	public static HashMap<String, Integer> char_stats ;  //strength, scrap, skill, health, hydration, malnutrition
 
 	public status(){
 		char_stats = new HashMap<>();
-
 		char_stats.put("strength", 1);
-		char_stats.put("intelligence", 1);
+		char_stats.put("scrap", 1);
 		char_stats.put("skill", 1);
 		char_stats.put("health", 1);
 		char_stats.put("hydration", 10); // goes down

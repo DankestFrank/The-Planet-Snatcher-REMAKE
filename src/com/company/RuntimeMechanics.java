@@ -1,8 +1,9 @@
 package com.company;
 
 import com.company.inventory.ItemActions;
+import com.company.inventory.ItemTemplate;
 
-public class StoryLine {
+public class RuntimeMechanics {
     public static void randomNumber(){
         int rand = (int)Math.random()*6;
     }
@@ -15,8 +16,11 @@ public class StoryLine {
             case(3):
                 ItemActions.createRustyRobotArm();
             case(4):
-
+                ItemActions.createBoots();
+            case(5):
+                ItemActions.createShovel();
         }
     }
+
 
 }
