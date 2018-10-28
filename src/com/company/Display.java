@@ -1,11 +1,8 @@
 package com.company;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class Display {
@@ -25,7 +22,9 @@ public class Display {
 
 
 		String data = "";
-		data = new String(Files.readAllBytes(Paths.get(fileName)));
+		URL path = Display.class.getResource(fileName);
+		File f = new File(path.getFile());
+		data =  new Scanner(f).useDelimiter("\\Z ").next();
 		return data;
 	}
 
@@ -59,8 +58,9 @@ public class Display {
 		clear();
 		display("WELCOME TO\n" );
 
-		System.out.println(readFileAsString(System.getProperty("user.dir") + "\\The-Planet-Snatcher-REMAKE\\src\\com\\company\\TitleArt").replaceAll("&&&","\t\t\t\t\t"));
-		//TODO: Make File Global
+
+
+		System.out.println(readFileAsString("TitleArt").replaceAll("&&&","\t\t\t\t\t"));
 		System.out.print("\n\n\n");
 		display("By Frank Dininno and Dylan Starink");
 		System.out.print("\n\n\n");

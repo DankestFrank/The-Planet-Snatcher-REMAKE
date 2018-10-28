@@ -33,7 +33,7 @@ public class ItemTemplate{
         status.changeStats("hydration", hydrationValue);
         boolean equipable = true;
     }
-    Object currentEquipment = null;
+    static Object currentEquipment = null;
     public void removeAttributes(){
         status.changeStats("strength", -1 * strengthValue);
         status.changeStats("promptitude", -1 * promptitudeValue);

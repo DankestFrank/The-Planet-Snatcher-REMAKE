@@ -47,7 +47,7 @@ public class ItemActions{
 
         if(itemClass.equipable){
             itemClass.removeAttributes();
-            itemClass.currentEquipment = itemClass;
+            ItemTemplate.currentEquipment = itemClass;
             itemClass.changeAttributes();
         }
         else{
