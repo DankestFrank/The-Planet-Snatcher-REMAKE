@@ -35,7 +35,7 @@ public class RuntimeMechanics {
             String chooseItem = scan.nextLine();
             while(temporary) {
                 if (indexOf.contains(chooseItem)) {
-                    Status.char_items.get(i).changeAttributes();
+                    ItemActions.activateItem(Status.char_items.get(i));
                     System.out.println("Completed!");
                 }
                 else

@@ -59,7 +59,7 @@ public class ItemActions{
     //public static ItemTemplate createGrimeCube
 
 
-    public void activateItem(ItemTemplate itemClass){
+    public static void activateItem(ItemTemplate itemClass){
 
         if(itemClass.equipable){
             itemClass.removeAttributes();

@@ -17,10 +17,10 @@ public class ItemTemplate{
     int hydrationValue = 0;
 
     // display object information
-    String name;
+    public String name;
     //choose to set message equal to the given placeholder or maually type it out
-    String messagePlaceholder = (this.name + " {Power: " + strengthValue +", Scrap value in grams: " + scrapValue + ", Promptude: "+ promptitudeValue + ", Health: " + healthValue + " }\n");
-    String Message;
+    public String messagePlaceholder = (this.name + " {Power: " + strengthValue +", Scrap value in grams: " + scrapValue + ", Promptude: "+ promptitudeValue + ", Health: " + healthValue + " }\n");
+    public String Message;
 
 
 
