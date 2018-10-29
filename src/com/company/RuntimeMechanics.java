@@ -25,6 +25,8 @@ public class RuntimeMechanics {
                 ItemActions.createShovel();
         }
     }
+
+
     public static void fabricateInventory(){
         boolean temporary = true;
         char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
@@ -40,6 +42,8 @@ public class RuntimeMechanics {
                 ItemActions.activateItem(Status.char_items.get(indexOfAlph.indexOf(chooseItem)));
                 System.out.println("Completed!");
             }
+            else if(chooseItem.equals(""));
+                // at some point we will have a hud to display, preferably with a 1.go back to last position 2.continue 3.items or 4.craft
             else
                 System.out.println("Not a choice, sorry. Please choose another one or press enter to continue :)");
         }
