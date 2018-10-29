@@ -2,7 +2,15 @@ package com.company;
 
 import com.company.inventory.ItemTemplate;
 
+import java.util.*;
+
 public class bluePrintCrafting {
+
+    bluePrintCrafting(){
+        blueprints.add(this);
+    }
+
+    public static ArrayList<bluePrintCrafting> blueprints = new ArrayList<bluePrintCrafting>();
     public int scrapsRequired = 0;
 
     boolean equipable = false;
@@ -18,9 +26,12 @@ public class bluePrintCrafting {
     public String messagePlaceholder = (this.name + " {Power: " + strengthValue +", Scrap value in grams: " + scrapValue + ", Promptude: "+ promptitudeValue + ", Health: " + healthValue + " }\n");
     public String Message;
 
-    public static void addItemToInventory(bluePrintCrafting any){
-        if(Status.char_stats.get("scrap") >= any.scrapsRequired){
-            any = new ItemTemplate();
+    public void addItemToInventory(){
+        if(Status.char_stats.get("scrap") >= this.scrapsRequired){
+            new ItemTemplate();
         }
+        else
+            System.out.println("Not enough scraps");
     }
 }
+

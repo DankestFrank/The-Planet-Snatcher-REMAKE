@@ -5,7 +5,7 @@ import com.company.Status;
 public class ItemTemplate{
 
 
-    ItemTemplate(){
+    public ItemTemplate(){
         Status.char_items.add(this);
     }
     boolean equipable = false;
