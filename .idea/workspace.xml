@@ -13,37 +13,38 @@
     <session id="1010672690">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.24" value="3" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
+          <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Text Brainstorming" value="39" />
           <entry key="dummy" value="16" />
-          <entry key="java" value="9040" />
+          <entry key="java" value="9257" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9040" />
+          <entry key="JAVA" value="9257" />
           <entry key="PLAIN_TEXT" value="55" />
         </counts>
       </usages-collector>
@@ -64,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="331">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,17 +77,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/inventory/ItemTemplate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-69">
-              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="238">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/bluePrintCrafting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
+            <state relative-caret-position="414">
+              <caret line="118" column="35" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -95,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/inventory/ItemActions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="346">
-              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -103,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/RuntimeMechanics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+            <state relative-caret-position="629">
+              <caret line="41" column="56" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/com/company/inventory/ItemActions.java" />
         <option value="$PROJECT_DIR$/src/com/company/RuntimeMechanics.java" />
         <option value="$PROJECT_DIR$/src/com/company/Display.java" />
+        <option value="$PROJECT_DIR$/src/com/company/bluePrintCrafting.java" />
       </list>
     </option>
   </component>
@@ -184,7 +195,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="242" />
     <option name="y" value="-12" />
     <option name="width" value="697" />
@@ -195,7 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,13 +236,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540784914393" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540823433187" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -303,7 +314,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27231467" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27609682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -319,7 +330,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.019672131" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.019672131" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -380,6 +391,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/RuntimeMechanics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="41" column="56" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Text Brainstorming">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -389,8 +410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Status.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="331">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -399,32 +420,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/inventory/ItemTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state relative-caret-position="238">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="118" column="35" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/inventory/ItemActions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/RuntimeMechanics.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/bluePrintCrafting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="121" column="22" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
+        <state relative-caret-position="366">
+          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
         </state>
       </provider>
     </entry>

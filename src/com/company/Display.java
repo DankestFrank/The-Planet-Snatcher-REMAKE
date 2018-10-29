@@ -103,24 +103,23 @@ public class Display {
 		String craftItems = "c: Craft Items<";
 		String Continue = "ENTER: Continue<>";
 		String input = RuntimeMechanics.scan.nextLine();
-
-		if(index.contains(input)){
+		if(input.equals("")){
+			//continue() (once created)
+			temporary = false;
+		}
+		else if(index.contains(input)){
 		 	if(input.equals("b")) {
 		 		displayInventory();
 		 		temporary = false;
 		 	}
-		 	else if(input.equals("b")){
+		 	else if(input.equals("c")){
 		 		//craftItems() (once created)
 				temporary = false;
 			}
-			else if(input.equals("b")) {
+			else if(input.equals("a")) {
 				//goBackToLastPos() (once created)
 				temporary = false;
 			}
-		}
-		else if(input.equals("")){
-			//continue() (once created)
-			temporary = false;
 		}
 		else
 			System.out.println("Not a choice, sorry. Please choose another one or press enter to continue :)");
@@ -137,14 +136,14 @@ public class Display {
 		System.out.println("Enter: HUD");
 		String chooseItem = RuntimeMechanics.scan.nextLine();
 		while(temporary) {
-			if (indexOfAlph.contains(chooseItem)) {
-				ItemActions.activateItem(Status.char_items.get(indexOfAlph.indexOf(chooseItem)));
-				System.out.println("Completed!");
-				temporary = false;
-			}
-			else if(chooseItem.equals("")) {
+			if(chooseItem.equals("")) {
 				// at some point we will have a hud to display, preferably with a 1.go back to last position 2.continue 3.items or 4.craft
 				displayHud();
+				temporary = false;
+			}
+			else if (indexOfAlph.contains(chooseItem)) {
+				ItemActions.activateItem(Status.char_items.get(indexOfAlph.indexOf(chooseItem)));
+				System.out.println("Completed!");
 				temporary = false;
 			}
 			else
