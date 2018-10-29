@@ -113,7 +113,7 @@ public class Display {
 		 		temporary = false;
 		 	}
 		 	else if(input.equals("c")){
-		 		//craftItems() (once created)
+		 		displayBlueprints();
 				temporary = false;
 			}
 			else if(input.equals("a")) {
@@ -150,30 +150,29 @@ public class Display {
 				System.out.println("Not a choice, sorry. Please choose another one or press enter to continue :)");
 		}
 	}
+
 	public static void displayBlueprints() {
 
 		boolean temporary = true;
 
 		for (int i = 0; i < Status.char_items.size(); i++) {
 			System.out.print(alphabet2[i] + ": ");
-			System.out.print(Status.char_items.get(i).Message);
+			System.out.print(bluePrintCrafting.blueprints.get(i).Message);
 		}
 		System.out.println("Enter: HUD");
 		String chooseItem = RuntimeMechanics.scan.nextLine();
 		while (temporary) {
 			if (chooseItem.equals("")) {
-				// at some point we will have a hud to display, preferably with a 1.go back to last position 2.continue 3.items or 4.craft
 				displayHud();
 				temporary = false;
 			} else if (indexOfAlph.contains(chooseItem)) {
-				ItemActions.activateItem(Status.char_items.get(indexOfAlph.indexOf(chooseItem)));
+				bluePrintCrafting.blueprints.get(indexOfAlph.indexOf(chooseItem)).addItemToInventory();
 				System.out.println("Completed!");
 				temporary = false;
 			} else
 				System.out.println("Not a choice, sorry. Please choose another one or press enter to continue :)");
 		}
 	}
-
 
     public static void main(String[]args) throws Exception {
 
