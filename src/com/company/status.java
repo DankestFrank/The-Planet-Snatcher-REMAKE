@@ -10,6 +10,7 @@ public class Status {
 	public static boolean gameInProgress = false;
 
 	public static Sector currentNode;
+
 	public Status(){
 		char_stats = new HashMap<>();
 		char_stats.put("strength", 1);

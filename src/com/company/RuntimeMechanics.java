@@ -2,6 +2,7 @@ package com.company;
 import java.util.*;
 import com.company.inventory.ItemActions;
 import com.company.inventory.ItemTemplate;
+import com.company.locations.Sector;
 
 public class RuntimeMechanics {
 
@@ -26,5 +27,28 @@ public class RuntimeMechanics {
         }
     }
 
+    public static Sector runNode(Sector node){
+        for(int i=0; i<node.connectedNodes.size();i++) {
+            System.out.println(Display.alphabet2[i] +": "+ node.connectedNodes.get(i));
+
+        }
+        return node;
+    }
+
+    public static void nextNode() {
+        boolean bool = true;
+        Sector node = runNode(Status.currentNode);
+        String input = scan.nextLine();
+        while (bool) {
+            if (input.equals("")) {
+                System.out.println("Not a choice");
+            } else if (Display.indexOfAlph.contains(scan.nextLine())) {
+                Status.currentNode = node;
+                runNode(Status.currentNode);
+            }
+            else
+                System.out.println("Not a choice");
+        }
+    }
 
 }

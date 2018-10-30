@@ -13,7 +13,7 @@ public class Sector {
 
 	ArrayList<ItemTemplate> items = new ArrayList<>();
 
-	ArrayList<Sector> connectedNodes = new ArrayList<>();
+	public ArrayList<Sector> connectedNodes = new ArrayList<>();
 
 	public void setName(String name) {
 		this.name = name;
