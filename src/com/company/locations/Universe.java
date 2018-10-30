@@ -2,7 +2,7 @@ package com.company.locations;
 
 public class Universe {
 
-	Planet Earth =  new Planet("Earth");
-	Planet Mars = new Planet("Mars");
+	Planet Earth =  new Planet(Planet.PLANET.EARTH);
+	Planet Mars = new Planet(Planet.PLANET.MARS);
 
 }
