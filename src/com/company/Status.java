@@ -1,5 +1,6 @@
 package com.company;
 import com.company.inventory.ItemTemplate;
+import com.company.locations.Sector;
 
 import java.util.*;
 public class Status {
@@ -8,6 +9,7 @@ public class Status {
 	public static HashMap<String, Integer> char_stats ;  //strength, scrap, skill, health, hydration, malnutrition
 	public static boolean gameInProgress = false;
 
+	public static Sector currentNode;
 	public Status(){
 		char_stats = new HashMap<>();
 		char_stats.put("strength", 1);
