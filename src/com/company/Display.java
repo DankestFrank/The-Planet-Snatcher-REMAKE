@@ -101,7 +101,7 @@ public class Display {
 		System.out.println("a: Go back to last position<");
 		String items = "b: Inventory<";
 		String craftItems = "c: Craft Items<";
-		String Continue = "ENTER: Continue<>";
+		String Continue = "ENTER: Exit";
 		String input = RuntimeMechanics.scan.nextLine();
 		if(input.equals("")){
 			//continue() (once created)
