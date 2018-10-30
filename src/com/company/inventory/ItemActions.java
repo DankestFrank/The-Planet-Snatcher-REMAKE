@@ -8,7 +8,7 @@ public class ItemActions{
     {
         ItemTemplate RustyRobotArm = new ItemTemplate();
         RustyRobotArm.Message = RustyRobotArm.messagePlaceholder;
-        RustyRobotArm.name = "Rusty Robot Arm";
+        RustyRobotArm.name = "Rusty Robotic Limb";
         RustyRobotArm.strengthValue = 4;
         RustyRobotArm.promptitudeValue = -3;
         RustyRobotArm.equipable = true;
@@ -20,7 +20,7 @@ public class ItemActions{
         FlameThrower.Message = FlameThrower.messagePlaceholder;
         FlameThrower.name = "Flame Thrower";
         FlameThrower.strengthValue = 1;
-        FlameThrower.intelligenceValue = 4;
+        FlameThrower.scrapValue = 4;
         FlameThrower.equipable = true;
         return FlameThrower;
     }
@@ -40,10 +40,26 @@ public class ItemActions{
         Exoskeleton.equipable = false;
         return Exoskeleton;
     }
+    public static ItemTemplate createShovel(){
+        ItemTemplate Shovel = new ItemTemplate();
+        Shovel.equipable = true;
+        Shovel.Message = Shovel.messagePlaceholder;
+        Shovel.name = "Shovel";
+        Shovel.promptitudeValue = -1;
+        Shovel.strengthValue = 2;
+        return Shovel;
+    }
+
+    public static ItemTemplate createBoots(){
+        ItemTemplate Boots = new ItemTemplate();
+        Boots.promptitudeValue = 5;
+        Boots.name = "Portable 3D Parts Printer";
+        return Boots;
+    }
     //public static ItemTemplate createGrimeCube
 
 
-    public void activateItem(ItemTemplate itemClass){
+    public static void activateItem(ItemTemplate itemClass){
 
         if(itemClass.equipable){
             itemClass.removeAttributes();

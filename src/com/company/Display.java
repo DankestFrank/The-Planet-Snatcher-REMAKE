@@ -1,11 +1,16 @@
 package com.company;
 
+import com.company.inventory.ItemActions;
+
 import java.io.File;
 import java.net.URL;
 import java.nio.file.Files;
 import java.util.*;
 
 public class Display {
+
+	public static char[] alphabet2 = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+	public static String indexOfAlph = "abcdefghijklmnopqrstuvwxyz";
 
 	static int height = 44;
 	static int width = 200;
@@ -89,9 +94,89 @@ public class Display {
 
 	}
 
+	public static void displayHud() {
+		String index = "abcd";
+		boolean temporary = true;
+
+		System.out.println("a: Go back to last position<");
+		String items = "b: Inventory<";
+		String craftItems = "c: Craft Items<";
+		String Continue = "ENTER: Continue<>";
+		String input = RuntimeMechanics.scan.nextLine();
+		if(input.equals("")){
+			//continue() (once created)
+			temporary = false;
+		}
+		else if(index.contains(input)){
+		 	if(input.equals("b")) {
+		 		displayInventory();
+		 		temporary = false;
+		 	}
+		 	else if(input.equals("c")){
+		 		displayBlueprints();
+				temporary = false;
+			}
+			else if(input.equals("a")) {
+				//goBackToLastPos() (once created)
+				temporary = false;
+			}
+		}
+		else
+			System.out.println("Not a choice, sorry. Please choose another one or press enter to continue :)");
+	}
+
+	public static void displayInventory(){
+
+		boolean temporary = true;
+
+		for(int i=0; i<Status.char_items.size();i++){
+			System.out.print(alphabet2[i] + ": ");
+			System.out.print(Status.char_items.get(i).Message);
+		}
+		System.out.println("Enter: HUD");
+		String chooseItem = RuntimeMechanics.scan.nextLine();
+		while(temporary) {
+			if(chooseItem.equals("")) {
+				// at some point we will have a hud to display, preferably with a 1.go back to last position 2.continue 3.items or 4.craft
+				displayHud();
+				temporary = false;
+			}
+			else if (indexOfAlph.contains(chooseItem)) {
+				ItemActions.activateItem(Status.char_items.get(indexOfAlph.indexOf(chooseItem)));
+				System.out.println("Completed!");
+				temporary = false;
+			}
+			else
+				System.out.println("Not a choice, sorry. Please choose another one or press enter to continue :)");
+		}
+	}
+
+	public static void displayBlueprints() {
+
+		boolean temporary = true;
+
+		for (int i = 0; i < Status.char_items.size(); i++) {
+			System.out.print(alphabet2[i] + ": ");
+			System.out.print(bluePrintCrafting.blueprints.get(i).Message);
+		}
+		System.out.println("Enter: HUD");
+		String chooseItem = RuntimeMechanics.scan.nextLine();
+		while (temporary) {
+			if (chooseItem.equals("")) {
+				displayHud();
+				temporary = false;
+			} else if (indexOfAlph.contains(chooseItem)) {
+				bluePrintCrafting.blueprints.get(indexOfAlph.indexOf(chooseItem)).addItemToInventory();
+				System.out.println("Completed!");
+				temporary = false;
+			} else
+				System.out.println("Not a choice, sorry. Please choose another one or press enter to continue :)");
+		}
+	}
 
     public static void main(String[]args) throws Exception {
 
 		mainMenu();
     }
 }
+
