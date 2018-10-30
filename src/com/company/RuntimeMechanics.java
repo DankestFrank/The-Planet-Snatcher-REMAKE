@@ -29,7 +29,7 @@ public class RuntimeMechanics {
 
     public static Sector runNode(Sector node){
         for(int i=0; i<node.connectedNodes.size();i++) {
-            System.out.println(Display.alphabet2[i] +": "+ node.connectedNodes.get(i));
+            System.out.println(Display.alphabet2[i] +": "+ node.connectedNodes.get(i).displayNameMessage);
         }
         System.out.println("ENTER: HUD");
         return node;

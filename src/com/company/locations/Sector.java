@@ -27,6 +27,8 @@ public class Sector {
 		this.type = type;
 	}
 
+	public String displayNameMessage;
+
 	private void addConnectedNode(Sector node){
 		node.connectedNodes.add(this);
 		this.connectedNodes.add(node);
