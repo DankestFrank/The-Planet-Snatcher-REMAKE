@@ -101,10 +101,9 @@ public class Display {
 		System.out.println("a: Go back to last position<");
 		String items = "b: Inventory<";
 		String craftItems = "c: Craft Items<";
-		String Continue = "ENTER: Exit";
+		String Continue = "ENTER: EXIT";
 		String input = RuntimeMechanics.scan.nextLine();
-		if(input.equals("")){
-			//continue() (once created)
+		if(input.equals("")){ //exit
 			temporary = false;
 		}
 		else if(index.contains(input)){

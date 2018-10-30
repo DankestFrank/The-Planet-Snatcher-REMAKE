@@ -30,24 +30,26 @@ public class RuntimeMechanics {
     public static Sector runNode(Sector node){
         for(int i=0; i<node.connectedNodes.size();i++) {
             System.out.println(Display.alphabet2[i] +": "+ node.connectedNodes.get(i));
-
         }
+        System.out.println("ENTER: HUD");
         return node;
     }
 
     public static void nextNode() {
-        boolean bool = true;
-        Sector node = runNode(Status.currentNode);
-        String input = scan.nextLine();
-        while (bool) {
-            if (input.equals("")) {
-                System.out.println("Not a choice");
-            } else if (Display.indexOfAlph.contains(scan.nextLine())) {
-                Status.currentNode = node;
-                runNode(Status.currentNode);
+        while(true){
+            Sector node = runNode(Status.currentNode);
+            String input = scan.nextLine();
+            while (true) {
+                if (input.equals("")) {
+                    node = Status.currentNode;
+                    Display.displayHud();
+                } else if (Display.indexOfAlph.contains(scan.nextLine())) {
+                    Status.currentNode = node;
+                    runNode(node.connectedNodes.get(Display.indexOfAlph.indexOf((input))));
+                } else {
+                    System.out.println("Not a choice");
+                }
             }
-            else
-                System.out.println("Not a choice");
         }
     }
 
