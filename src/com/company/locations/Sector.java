@@ -11,7 +11,7 @@ public class Sector {
 	public static int desertCountMax = 0;
 	public static int plainsCountMax = 0;
 
-	public static int subsettingNodeCount = 0; //advances subsetting every time this var reaches 1-3 or more 
+	public static int subsettingNodeCount = 0; //advances subsetting every time this var reaches 1-3 or more
 
 	//'()' = example
 	public static String selectSetting;
