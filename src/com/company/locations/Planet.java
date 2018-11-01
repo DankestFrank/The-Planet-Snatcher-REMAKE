@@ -1,5 +1,7 @@
 package com.company.locations;
 
+import com.company.Sector;
+
 public class Planet {
 	String name;
 

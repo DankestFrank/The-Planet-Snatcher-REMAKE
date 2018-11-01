@@ -1,6 +1,5 @@
 package com.company;
 import com.company.inventory.ItemTemplate;
-import com.company.locations.Sector;
 
 import java.util.*;
 public class Status {

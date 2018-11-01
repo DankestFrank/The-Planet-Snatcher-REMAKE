@@ -1,6 +1,5 @@
-package com.company.locations;
+package com.company;
 
-import com.company.Status;
 import com.company.inventory.ItemTemplate;
 
 import java.util.ArrayList;
@@ -11,10 +10,8 @@ public class Sector {
 	public static int desertCountMax = 0;
 	public static int plainsCountMax = 0;
 
-	public static int subsettingNodeCount = 0; //advances subsetting every time this var reaches 1-3 or more
-
 	//'()' = example
-	public static String selectSetting;
+	public static Object selectSetting;
 	// you roam the (plains) [couple nodes]
 	public static String selectedLandmark;
 	// you find a (city) of tag selectedSetting [bunch of nodes because many building for say]
