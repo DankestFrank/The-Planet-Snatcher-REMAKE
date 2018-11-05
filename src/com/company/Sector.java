@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.inventory.ItemTemplate;
+import com.company.themes.locations;
 
 import java.util.ArrayList;
 
@@ -9,6 +10,8 @@ public class Sector {
 
 	public static int desertCountMax = 0;
 	public static int plainsCountMax = 0;
+
+	String text;
 
 	//'()' = example
 	public static Object selectSetting;
@@ -19,10 +22,14 @@ public class Sector {
 	// you reach a dead end of a (house) of tag selectedLandMark [few nodes]
 
 	public static String currentSubsetting;
+	public static String currentLocation;
 
 	//whenever you reach a land mark, it is through a node leading past and into it
 
+	public static String[] roaming = {"plains","desert"};
 
+	public static String[] chooseTheme = {"undergroudTunnel", "rusticCity", "populatedCity"};// all locations have a different theme
+	public static String[] subsettings = {"location","structure","conpartment"}; //permanent
 
 	String openingText;
 
@@ -57,6 +64,9 @@ public class Sector {
 
 	public Sector addChildNode(String name){
 		Sector newChildNode = new Sector(name);
+		if(currentSubsetting.equals(subsettings[0])){
+			newChildNode.text = locations.currentLocation;
+		}
 		//random customization desert > outside or in a city >
 		addConnectedNode(newChildNode);
 		return newChildNode;
@@ -88,8 +98,6 @@ public class Sector {
 			addChildNode(currentSubsetting);
 		}
 	}
-
-
 
 	enum spaceType{
 		DEFAULT,
