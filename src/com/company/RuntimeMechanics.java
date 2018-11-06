@@ -7,8 +7,8 @@ public class RuntimeMechanics {
     int inventoryCapacity = 26;
 
     public static Scanner scan = new Scanner(System.in);
-    public static void randomNumber(){
-        int rand = (int)Math.random()*6;
+    public static Integer randomNumber(int range){
+        return ((int)Math.random()*range)+1;
     }
     public static void randomItemReward(int randomNum){
         switch(randomNum){

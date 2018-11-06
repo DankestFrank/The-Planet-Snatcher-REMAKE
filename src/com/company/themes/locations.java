@@ -1,5 +1,7 @@
 package com.company.themes;
 
 public class locations {
-    public static String rusticCity = "lol";
+    public void rusticCity(){
+        System.out.println("locations");
+    }
 }

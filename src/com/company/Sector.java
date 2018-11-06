@@ -67,6 +67,12 @@ public class Sector {
 		if(currentSubsetting.equals(subsettings[0])){
 			newChildNode.text = locations.currentLocation;
 		}
+		else if(currentSubsetting.equals(subsettings[1])){
+			newChildNode.text = structures.currentLocation;
+		}
+		else if(currentSubsetting.equals(subsettings[2])){
+			newChildNode.text = conpartments.currentLocation;
+		}
 		//random customization desert > outside or in a city >
 		addConnectedNode(newChildNode);
 		return newChildNode;
